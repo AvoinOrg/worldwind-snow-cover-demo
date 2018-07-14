@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "build": "parcel build src/index.html",
+    "start": "parcel src/index.html"
+  },
+  "dependencies": {
+    "@nasaworldwind/worldwind": "^0.9.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.9.4"
+  }
+}
