@@ -11,7 +11,7 @@ wwd.layers[0].renderables.forEach(r => { r.opacity = 0.6 })
 WorldWind.Logger.setLoggingLevel(WorldWind.Logger.LEVEL_WARNING);
 
 // Show the approximate center of the snow meltoff maps.
-wwd.goTo(new WorldWind.Position(57, 19, 5000000))
+wwd.goTo(new WorldWind.Position(57, 19, 8000000))
 
 // Geographic extent of the snow cover maps below.
 const bbox = new WorldWind.Sector(35, 72, -11, 50)
