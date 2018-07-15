@@ -4,7 +4,9 @@
 <head lang="en">
   <meta charset="UTF-8">
   <title>Snow Cover between 2001 and 2016</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    body, html {height:100%; overflow:hidden;}
     #output {
       margin: auto;
       font-size: 40px;
@@ -12,30 +14,51 @@
     }
 
     #canvas-container {
-      height: 800px;
+      height: 40%;
       display: block;
+    }
+    #canvas-container.max {
+      height:80%;
     }
 
     #logo,
     #icerink {
-      height: 150px;
+      max-width: 45%; 
+      max-height: 150px;
     }
 
     canvas {
       padding: 0;
-      margin: auto;
-      width: 1024px;
-      height: 768px;
-      position: absolute;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
       top: 0;
       bottom: 0;
       left: 0;
       right: 0;
     }
-
     footer {
       font-size: 30px;
       text-align: center;
+    }
+    footer > p {
+      max-width: 750px;
+      margin:0 auto;
+    }
+    @media screen and (min-width: 750px) {
+      #canvas-container {
+        height: 63%;
+      }
+    }
+    footer.max {
+      visibility: hidden;
+      display: hidden;
+    }
+    .footer-bar {
+      margin:10px auto;
+      width:50px;
+      height:12px;
+      background-color: grey;
     }
   </style>
 </head>
@@ -45,21 +68,22 @@
   <canvas id="worldwind-canvas">
     Your browser does not support HTML5 Canvas.
   </canvas>
-</div>
 
-<footer>
-  <div style='margin:20px auto; width:50px; height:12px; background-color: grey'></div>
-  <p style='max-width: 750px;margin:0 auto'>
-    Between 2001 and 2016, snow cover decreased 8,000 km<sup>2</sup> per year. This equals
-    <strong>500,000</strong> ice rinks.
-    <!-- <small>Data from Finnish Environment Institute</small> -->
-    <div style='display:block;margin-top:16px'>
-      <img id='icerink' src='./icerink.jpeg' />
-      <a href='http://www.syke.fi'>
-        <img id='logo' src='./SYKE_logo.svg' />
-      </a>
-    </div>
-</footer>
+  <div onClick='document.getElementById("canvas-container").classList.toggle("max"); document.getElementById("info").classList.toggle("max")' class='footer-bar'></div>
+  <footer id='info'>
+      <p>
+        Between 2001 and 2016, snow cover decreased 8,000 km<sup>2</sup> per year. This equals
+        <strong>500,000</strong> ice rinks.
+      </p>
+        <!-- <small>Data from Finnish Environment Institute</small> -->
+        <div style='display:block;margin-top:16px'>
+          <img id='icerink' src='./icerink.jpeg' />
+          <a href='http://www.syke.fi'>
+            <img id='logo' src='./SYKE_logo.svg' />
+          </a>
+        </div>
+    </footer>
+</div>
 
 <script src="index.js"></script>
 
