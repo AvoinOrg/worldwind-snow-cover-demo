@@ -37,7 +37,7 @@ const years = range(2001, 2016 + 1)
 // - Fix transparency in the resulting image:
 //       convert map_epsg4087_tenth_w1.png -transparent '#B3B3B3B3' map_epsg4087_tenth_w2.png
 //
-const urls = years.map(year => `o/meltoff_${year}_epsg4087_tenth_w2.png`)
+const urls = years.map(year => `map/meltoff_${year}_epsg4087_tenth_w2.png`)
 
 // Create a layer for each map with a single SurfaceImage each from the map image URL
 const layers = years.map(year => new WorldWind.RenderableLayer(`Snow Meltoff on ${year}`))

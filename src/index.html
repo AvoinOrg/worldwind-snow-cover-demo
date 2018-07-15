@@ -15,8 +15,10 @@
       height: 800px;
       display: block;
     }
-    #logo {
-      width: 150px;
+
+    #logo,
+    #icerink {
+      height: 150px;
     }
 
     canvas {
@@ -30,6 +32,7 @@
       left: 0;
       right: 0;
     }
+
     footer {
       font-size: 30px;
       text-align: center;
@@ -45,13 +48,18 @@
 </div>
 
 <footer>
-    <p>Between 2001 and 2016, snow cover has had a decreasing trend of 8,000 km<sup>2</sup> per year.</p>
-    <p>This equals 500,000 ice rinks.</p>
-    <p>
-      <small>Data from Finnish Environment Institute</small>
-    </p>
-    <img id='logo' src='SYKE_logo.svg'/>
-  </footer>
+  <div style='margin:20px auto; width:50px; height:12px; background-color: grey'></div>
+  <p style='max-width: 750px;margin:0 auto'>
+    Between 2001 and 2016, snow cover decreased 8,000 km<sup>2</sup> per year. This equals
+    <strong>500,000</strong> ice rinks.
+    <!-- <small>Data from Finnish Environment Institute</small> -->
+    <div style='display:block;margin-top:16px'>
+      <img id='icerink' src='./icerink.jpeg' />
+      <a href='https://syke.fi'>
+        <img id='logo' src='./SYKE_logo.svg' />
+      </a>
+    </div>
+</footer>
 
 <script src="index.js"></script>
 

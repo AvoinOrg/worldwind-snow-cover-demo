@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "rm -rf dist/ && parcel build src/index.html && cp -a worldwind/images/ dist/",
+    "build": "rm -rf dist/ && parcel build --public-url . src/index.html && cp -a map/ worldwind/images/ dist/",
     "start": "parcel src/index.html"
   },
   "dependencies": {
